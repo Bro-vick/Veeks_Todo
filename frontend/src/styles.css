@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+}
+
+body{
+    background-color: darkslategray;
+    background-image: url("./assets/image.png");
+    color: aliceblue;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.title{
+    text-align: center;
+    font-size: 3rem;
+    padding: 3rem 0 1rem;
+}
+
+.todos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.todo {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 1.25rem;
+ 
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 50%;
+    font-size: 1.4rem;
+    border-radius: 1rem;
+    transition: all 0.2s;
+ 
+    &:hover {
+     background-color: rgba(255, 255, 255, 0.2);
+    }
+  }
+
+  .mutations {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .todo__status,
+  .todo__delete{
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: all 0.4s;
+    background: white;
+    font-size: 1.6rem;
+    height: 80%;
+    padding: 2px;
+    border-radius: 10px;
+    &:hover {
+        transform: scale(1.15);
+    }
+  }
+
+  .todo__status {
+    font-size: 1.75rem;
+    color: green;
+    
+    
+   }
+   .todo__delete{
+    color: red;
+   }
+
+   .form{
+    display: flex;
+    gap: 0.5rem;
+    width: 50%;
+    margin: 1rem auto;
+    }
+
+    .form_input{
+        flex: 1;
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        border: none;
+        outline: none;
+        width: 70%;
+        font-size: 1.4rem;
+
+        &:focus,
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.85);
+        }
+    }
+
+    .form_btn{
+        border: none;
+        background-color: rgba(113, 0, 212, 0.7);
+        cursor: pointer;
+        border-radius: 0.25rem;
+        transition: all 0.4s;
+        color: white;
+        font: 900;
+        width: 30%;
+        font-size: 1rem;
+        &:hover {
+            background-color: rgba(95, 0, 179, 0.5);
+        }
+    }
+
+    @media (max-width: 420px){
+        .title {
+            font-size: 2.5rem;
+        }
+        .form {
+            width: 95%;
+        }
+        .todo {
+            width: 95%;
+            font-size: 1.2rem;
+        }
+    }
